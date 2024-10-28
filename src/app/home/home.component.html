@@ -1,0 +1,175 @@
+<div class="home-container">
+  <div class="section-top">
+    <div class="content-1">
+      <div class="content-name">Active</div>
+      <div class="value">{{ activeCount }}</div>
+    </div>
+    <div class="content-2">
+      <div class="content-name">Nearing Milestone</div>
+      <div class="value">{{ nearingMilestoneCount }}</div>
+    </div>
+    <div class="content-3">
+      <div class="content-name">Open Issues</div>
+      <div class="value">{{ openIssuesCount }}</div>
+    </div>
+    <div class="content-4">
+      <div class="content-name">Completed Orders</div>
+      <div class="value">{{ completedOrdersCount }}</div>
+    </div>
+  </div>
+  
+  <div class="section-bottom">
+    <div class="content-1-details">
+      <div class="heading">
+        <div class="title">Active Orders</div>
+        <mat-icon>download</mat-icon>
+      </div>
+      <div class="details-table">
+        <section class="example-container mat-elevation-z8" tabindex="0">
+          <table mat-table [dataSource]="dataSourceActive">
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+  
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Weight </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+        
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Symbol </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            </ng-container>
+  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </section>
+      </div>
+    </div>
+    <div class="content-2-details">
+      <div class="heading">
+        <div class="title">Nearing Milestone</div>
+        <mat-icon>download</mat-icon>
+      </div>
+      <div class="details-table">
+        <section class="example-container mat-elevation-z8" tabindex="0">
+          <table mat-table [dataSource]="dataSourceNearingMilestone">
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+  
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Weight </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+        
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Symbol </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            </ng-container>
+  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </section>
+      </div>
+    </div>
+    <div class="content-3-details">
+      <div class="heading">
+        <div class="title">Open Issues</div>
+        <mat-icon>download</mat-icon>
+      </div>
+      <div class="details-table">
+        <section class="example-container mat-elevation-z8" tabindex="0">
+          <table mat-table [dataSource]="dataSourceOpenIssues">
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+  
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Weight </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+        
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Symbol </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            </ng-container>
+  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </section>
+      </div>
+    </div>
+    <div class="content-4-details">
+      <div class="heading">
+        <div class="title">Completed Orders</div>
+        <mat-icon>download</mat-icon>
+      </div>
+      <div class="details-table">
+        <section class="example-container mat-elevation-z8" tabindex="0">
+          <table mat-table [dataSource]="dataSourceCompletedOrders">
+            <!-- Position Column -->
+            <ng-container matColumnDef="position">
+              <th mat-header-cell *matHeaderCellDef> No. </th>
+              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+            </ng-container>
+  
+            <!-- Name Column -->
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+        
+            <!-- Weight Column -->
+            <ng-container matColumnDef="weight">
+              <th mat-header-cell *matHeaderCellDef> Weight </th>
+              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+            </ng-container>
+        
+            <!-- Symbol Column -->
+            <ng-container matColumnDef="symbol">
+              <th mat-header-cell *matHeaderCellDef> Symbol </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+            </ng-container>
+  
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

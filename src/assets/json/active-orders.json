@@ -1,0 +1,28 @@
+
+
+[
+    { "position": 1, "name": "Lithium", "weight": 6.941, "symbol": "Li" },
+    { "position": 2, "name": "Beryllium", "weight": 9.0122, "symbol": "Be" },
+    { "position": 3, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
+    { "position": 4, "name": "Helium", "weight": 4.0026, "symbol": "He" },
+    { "position": 5, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
+    { "position": 6, "name": "Helium", "weight": 4.0026, "symbol": "He" },
+    { "position": 7, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
+    { "position": 8, "name": "Helium", "weight": 4.0026, "symbol": "He" },
+    { "position": 9, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
+    { "position": 10, "name": "Helium", "weight": 4.0026, "symbol": "He" },
+    { "position": 11, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
+    { "position": 12, "name": "Helium", "weight": 4.0026, "symbol": "He" },
+    { "position": 13, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
+    { "position": 14, "name": "Helium", "weight": 4.0026, "symbol": "He" },
+    { "position": 15, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
+    { "position": 16, "name": "Helium", "weight": 4.0026, "symbol": "He" },
+    { "position": 17, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
+    { "position": 18, "name": "Helium", "weight": 4.0026, "symbol": "He" },
+    { "position": 19, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
+    { "position": 20, "name": "Helium", "weight": 4.0026, "symbol": "He" },
+    { "position": 21, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
+    { "position": 22, "name": "Helium", "weight": 4.0026, "symbol": "He" }
+]
+  
+  

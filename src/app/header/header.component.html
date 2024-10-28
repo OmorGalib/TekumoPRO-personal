@@ -1,0 +1,32 @@
+<div class="header-container">
+    <div class="section-left">
+        <mat-icon>menu</mat-icon>
+        <div class="field-name">Overview</div>
+    </div>
+    <div class="section-right">
+        <div class="order-device-btn">
+            <button class="order-btn" type="submit">Order</button>
+            <button class="device-btn" type="submit">Device</button>
+        </div>
+        <mat-form-field>
+            <input matInput>
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+        <button class="advanced-btn" type="submit"><mat-icon matPrefix>add</mat-icon>Advanced</button>
+        <div class="logo">
+            <img src="../../assets/logo.png" alt="">
+        </div>
+        <mat-icon matBadge="0" matBadgeColor="warn">notifications</mat-icon>
+        <mat-icon>alarm</mat-icon>
+        <mat-icon [matMenuTriggerFor]="menu">more_vert</mat-icon>
+
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <span>item-1</span>
+            </button>
+            <button mat-menu-item disabled>
+                <span>item-2</span>
+            </button>
+        </mat-menu>          
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="section-login">
+      <div class="logo">
+        <img src="../../assets/logo.png" alt="Logo">
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field class="field-input">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" required>
+        </mat-form-field>
+  
+        <mat-form-field class="field-input">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password" required>
+        </mat-form-field>
+  
+        <button class="btn-signin" type="submit">Sign In</button>
+      </form>
+      <p class="forgot">Forgot your password? Click <a href="/">here</a> to reset.</p>
+      <p class="or">or</p>
+      <button routerLink="/" routerLinkActive="router-link-active"  class="btn-msft" type="button">
+        <img src="../../assets/microsoft_logo.png" alt="Microsoft Logo">
+        <p>Sign In With Microsoft</p>
+      </button>
+    </div>
+  </div>
+  
