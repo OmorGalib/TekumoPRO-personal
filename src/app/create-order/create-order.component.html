@@ -1,0 +1,11 @@
+<app-header></app-header>
+<div class="sub-header">
+    <mat-icon class="dot">more_horiz</mat-icon>
+    <div class="title">Create Order</div>
+    <button type="submit" (click)="onSubmit()">Create Order</button>
+</div>
+<div class="form-container">
+    <form [formGroup]="form">
+        <formly-form [fields]="fields" [model]="model" [options]="options"></formly-form>
+    </form>
+</div>

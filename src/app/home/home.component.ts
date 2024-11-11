@@ -4,11 +4,13 @@ import { PeriodicElement } from '../interfaces/periodic-element.model';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { forkJoin } from 'rxjs';
+import { HeaderComponent } from "../header/header.component";
+import { SubHeaderComponent } from "../sub-header/sub-header.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [MatIconModule, MatTableModule],
+  imports: [MatIconModule, MatTableModule, HeaderComponent, SubHeaderComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })

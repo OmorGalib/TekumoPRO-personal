@@ -1,0 +1,87 @@
+.sub-header {
+    display: flex;
+    gap: 5px;
+    height: 60px;
+    align-items: center;
+    padding: 0 25px;
+    background-color: gainsboro;
+    box-shadow: rgb(183, 185, 187) 3px 3px 6px 0px inset;
+
+    .dot {
+        margin-top: 6px;
+    }
+
+    .title {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 7px;
+        background-color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: 15px;
+    }
+}
+
+.form-container {
+    padding: 10px;
+    background-color: rgba(246, 242, 242, 0.661);;
+}
+::ng-deep .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 16px;
+}
+::ng-deep .column-title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    // padding: 10px;
+    background-color: #fff;
+}
+::ng-deep .column{
+    padding: 15px;
+    background-color: #fff;
+    height: fit-content;
+}
+::ng-deep .checkbox-design{
+    .mdc-text-field--no-label .mat-mdc-form-field-infix{
+        padding: 0;
+        min-height: fit-content;
+    }
+    .mdc-line-ripple::before ,.mdc-line-ripple::after{
+        border: none;
+    }
+}
+
+::ng-deep .location-row{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 10px;
+    align-items: baseline;
+    button{
+        width: 95% ;
+    }
+}
+::ng-deep .address-row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+}
+::ng-deep .contact-row{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+}
+::ng-deep .support-row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+}
+
