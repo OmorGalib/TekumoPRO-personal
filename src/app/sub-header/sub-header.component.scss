@@ -4,6 +4,9 @@
     height: 60px;
     align-items: center;
     padding: 0 25px;
+    position: sticky;
+    top: 70px;
+    z-index: 10;
     background-color: gainsboro;
     box-shadow: rgb(183, 185, 187) 3px 3px 6px 0px inset;
     .title{

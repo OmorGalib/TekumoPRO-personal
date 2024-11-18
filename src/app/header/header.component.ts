@@ -17,5 +17,9 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  isSidebarOpen = false;
 
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
 }

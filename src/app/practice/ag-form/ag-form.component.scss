@@ -1,12 +1,20 @@
-.ag-form-container{
-    width: 100%;
-    max-width: 1000px;
-    margin: 50px auto;
+.ag-form-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
 }
-.form-section{
+.form-section {
   padding: 20px;
 }
-.ag-table{
+.ag-table {
   width: 100%;
   padding: 30px;
+  position: relative;
+}
+mat-progress-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }

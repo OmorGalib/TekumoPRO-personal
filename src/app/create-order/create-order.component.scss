@@ -4,6 +4,9 @@
     height: 60px;
     align-items: center;
     padding: 0 25px;
+    position: sticky;
+    top: 70px;
+    z-index: 10;
     background-color: gainsboro;
     box-shadow: rgb(183, 185, 187) 3px 3px 6px 0px inset;
 
@@ -41,7 +44,7 @@
 ::ng-deep .column-title{
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
     // padding: 10px;
     background-color: #fff;
 }
@@ -61,27 +64,61 @@
 }
 
 ::ng-deep .location-row{
-    display: grid;
+    display: grid !important;
     grid-template-columns: 70% 30%;
     gap: 10px;
     align-items: baseline;
     button{
-        width: 95% ;
+        width: 98% ;
     }
 }
-::ng-deep .address-row{
-    display: grid;
+::ng-deep .address-row,
+::ng-deep .contact-row {
+    display: grid !important;
     grid-template-columns: repeat(4,1fr);
     gap: 5px;
+    align-items: baseline;
 }
-::ng-deep .contact-row{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 5px;
-}
+
 ::ng-deep .support-row{
-    display: grid;
+    display: grid !important;
     grid-template-columns: repeat(3,1fr);
     gap: 5px;
+    align-items: baseline;
 }
+::ng-deep .date-row,
+::ng-deep .schedule-row {
+    display: grid !important;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+    align-items: baseline;
+}
+
+::ng-deep .total-form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+}
+::ng-deep .left-column,
+::ng-deep .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+::ng-deep .order-details ,
+::ng-deep .order-location,
+::ng-deep .schedule{
+    padding: 15px;
+    // background-color: #4d0ce5;
+    background-color: #fff;
+    height: fit-content;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 8px;
+    formly-group{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
 

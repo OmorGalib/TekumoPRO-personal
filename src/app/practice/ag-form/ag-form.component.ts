@@ -13,6 +13,8 @@ import { of } from 'rxjs';
 import { delay, switchMap } from 'rxjs/operators';
 import { FormlyMatDatepickerModule } from '@ngx-formly/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 
 
@@ -26,7 +28,8 @@ import { MatNativeDateModule } from '@angular/material/core';
     FormlyModule,
     CommonModule,
     MatNativeDateModule,
-    FormlyMatDatepickerModule
+    FormlyMatDatepickerModule,
+    MatProgressSpinnerModule,
   ],
   templateUrl: './ag-form.component.html',
   styleUrls: ['./ag-form.component.scss'],
@@ -50,6 +53,7 @@ export class AgFormComponent {
   };
   options: FormlyFormOptions = {};
   submittedData: any[] = [];
+  
   
 
   // Formly fields with async and dependent fields
@@ -123,7 +127,7 @@ export class AgFormComponent {
                   { label: 'Kathmundu', value: 'kathmundu' },
                   { label: 'Kalinchowk', value: 'kalinchowk' },
                 ]);
-              } else if (country === 'India') {
+              } else if (country === 'india') {
                 return of([
                   { label: 'Delhi', value: 'delhi' },
                   { label: 'Kolkata', value: 'kolkata' },
