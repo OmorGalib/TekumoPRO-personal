@@ -100,7 +100,7 @@
     { "position": 97, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
     { "position": 98, "name": "Helium", "weight": 4.0026, "symbol": "He" },
     { "position": 99, "name": "Hydrogen", "weight": 1.0079, "symbol": "H" },
-    { "position": 110, "name": "Helium", "weight": 4.0026, "symbol": "He" }
+    { "position": 100, "name": "Helium", "weight": 4.0026, "symbol": "He" }
 ]
   
   

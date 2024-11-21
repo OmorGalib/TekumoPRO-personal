@@ -1,6 +1,7 @@
 <div class="home-container">
   <app-header></app-header>
   <app-sub-header></app-sub-header>
+  
   <div class="section-top">
     <div class="content-1">
       <div class="content-name">Active</div>
@@ -21,156 +22,91 @@
   </div>
   
   <div class="section-bottom">
+    <!-- Active Orders Table -->
     <div class="content-1-details">
       <div class="heading">
         <div class="title">Active Orders</div>
         <mat-icon>download</mat-icon>
       </div>
       <div class="details-table">
-        <section class="example-container mat-elevation-z8" tabindex="0">
-          <table mat-table [dataSource]="dataSourceActive">
-            <!-- Position Column -->
-            <ng-container matColumnDef="position">
-              <th mat-header-cell *matHeaderCellDef> No. </th>
-              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-            </ng-container>
-  
-            <!-- Name Column -->
-            <ng-container matColumnDef="name">
-              <th mat-header-cell *matHeaderCellDef> Name </th>
-              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-            </ng-container>
-        
-            <!-- Weight Column -->
-            <ng-container matColumnDef="weight">
-              <th mat-header-cell *matHeaderCellDef> Weight </th>
-              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-            </ng-container>
-        
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="symbol">
-              <th mat-header-cell *matHeaderCellDef> Symbol </th>
-              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-            </ng-container>
-  
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-        </section>
+        <div class="spinner-overlay" *ngIf="isTableActiveLoading">
+          <mat-spinner></mat-spinner>
+        </div>
+        <ag-grid-angular
+          class="ag-theme-alpine"
+          style="width: 100%; height: 240px;"
+          [rowData]="dataSourceActive"
+          [columnDefs]="columnDefs"
+          [defaultColDef]="defaultColDef"
+          (bodyScroll)="onTableActiveScroll()"
+        ></ag-grid-angular>
       </div>
+      
     </div>
+
+    <!-- Nearing Milestone Table -->
     <div class="content-2-details">
       <div class="heading">
         <div class="title">Nearing Milestone</div>
         <mat-icon>download</mat-icon>
       </div>
       <div class="details-table">
-        <section class="example-container mat-elevation-z8" tabindex="0">
-          <table mat-table [dataSource]="dataSourceNearingMilestone">
-            <!-- Position Column -->
-            <ng-container matColumnDef="position">
-              <th mat-header-cell *matHeaderCellDef> No. </th>
-              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-            </ng-container>
-  
-            <!-- Name Column -->
-            <ng-container matColumnDef="name">
-              <th mat-header-cell *matHeaderCellDef> Name </th>
-              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-            </ng-container>
-        
-            <!-- Weight Column -->
-            <ng-container matColumnDef="weight">
-              <th mat-header-cell *matHeaderCellDef> Weight </th>
-              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-            </ng-container>
-        
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="symbol">
-              <th mat-header-cell *matHeaderCellDef> Symbol </th>
-              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-            </ng-container>
-  
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-        </section>
+        <div class="spinner-overlay" *ngIf="isTableMilestoneLoading">
+          <mat-spinner></mat-spinner>
+        </div>
+        <ag-grid-angular
+          class="ag-theme-alpine"
+          style="width: 100%; height: 240px;"
+          [rowData]="dataSourceNearingMilestone"
+          [columnDefs]="columnDefs"
+          [defaultColDef]="defaultColDef"
+          (bodyScroll)="onTableMilestoneScroll()"
+        >
+        </ag-grid-angular>
       </div>
     </div>
+
+    <!-- Open Issues Table -->
     <div class="content-3-details">
       <div class="heading">
         <div class="title">Open Issues</div>
         <mat-icon>download</mat-icon>
       </div>
       <div class="details-table">
-        <section class="example-container mat-elevation-z8" tabindex="0">
-          <table mat-table [dataSource]="dataSourceOpenIssues">
-            <!-- Position Column -->
-            <ng-container matColumnDef="position">
-              <th mat-header-cell *matHeaderCellDef> No. </th>
-              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-            </ng-container>
-  
-            <!-- Name Column -->
-            <ng-container matColumnDef="name">
-              <th mat-header-cell *matHeaderCellDef> Name </th>
-              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-            </ng-container>
-        
-            <!-- Weight Column -->
-            <ng-container matColumnDef="weight">
-              <th mat-header-cell *matHeaderCellDef> Weight </th>
-              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-            </ng-container>
-        
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="symbol">
-              <th mat-header-cell *matHeaderCellDef> Symbol </th>
-              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-            </ng-container>
-  
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-        </section>
+        <div class="spinner-overlay" *ngIf="isTableIssuesLoading">
+          <mat-spinner></mat-spinner>
+        </div>
+        <ag-grid-angular
+          class="ag-theme-alpine"
+          style="width: 100%; height: 240px;"
+          [rowData]="dataSourceOpenIssues"
+          [columnDefs]="columnDefs"
+          [defaultColDef]="defaultColDef"
+          (bodyScroll)="onTableIssuesScroll()"
+        >
+        </ag-grid-angular>
       </div>
     </div>
+
+    <!-- Completed Orders Table -->
     <div class="content-4-details">
       <div class="heading">
         <div class="title">Completed Orders</div>
         <mat-icon>download</mat-icon>
       </div>
       <div class="details-table">
-        <section class="example-container mat-elevation-z8" tabindex="0">
-          <table mat-table [dataSource]="dataSourceCompletedOrders">
-            <!-- Position Column -->
-            <ng-container matColumnDef="position">
-              <th mat-header-cell *matHeaderCellDef> No. </th>
-              <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-            </ng-container>
-  
-            <!-- Name Column -->
-            <ng-container matColumnDef="name">
-              <th mat-header-cell *matHeaderCellDef> Name </th>
-              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-            </ng-container>
-        
-            <!-- Weight Column -->
-            <ng-container matColumnDef="weight">
-              <th mat-header-cell *matHeaderCellDef> Weight </th>
-              <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
-            </ng-container>
-        
-            <!-- Symbol Column -->
-            <ng-container matColumnDef="symbol">
-              <th mat-header-cell *matHeaderCellDef> Symbol </th>
-              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
-            </ng-container>
-  
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-        </section>
+        <div class="spinner-overlay" *ngIf="isTableCompleteLoading">
+          <mat-spinner></mat-spinner>
+        </div>
+        <ag-grid-angular
+          class="ag-theme-alpine"
+          style="width: 100%; height: 240px;"
+          [rowData]="dataSourceCompletedOrders"
+          [columnDefs]="columnDefs"
+          [defaultColDef]="defaultColDef"
+          (bodyScroll)="onTableCompleteScroll()"
+        >
+        </ag-grid-angular>
       </div>
     </div>
   </div>

@@ -16,11 +16,13 @@
   .content-name{
       font-size: 16px;
       font-weight: 500;
-      margin: 25px 0;
+      margin: 25px 0 10px 0;
     }
     .value{
       font-size: 75px;
       font-weight: 400;
+      line-height: 100%;
+      position: relative;
     }
   }
   .content-1{
@@ -75,11 +77,20 @@
     border-left: 5px solid blue;
   }
 }
-.example-container {
-  height: 240px;
-  max-height: 100%;
-  width:auto;
-  max-width: 100%;
-  overflow: auto;
-  box-shadow: none;
+.spinner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
+
+.details-table {
+  position: relative;
+}
+
